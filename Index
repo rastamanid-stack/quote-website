@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sam’s Quest for Cheryl’s Forgiveness</title>
+
+<style>
+    body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #f8cde8, #fadeb7);
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        max-width: 600px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 18px;
+        box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.7s ease-in-out;
+    }
+    h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+        color: #e45e83;
+    }
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+    button {
+        padding: 12px 28px;
+        border: none;
+        border-radius: 12px;
+        background: #e45e83;
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    button:hover {
+        background: #c64d72;
+    }
+    #second, #final {
+        display: none;
+        animation: fadeIn 0.7s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(10px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- STEP 1 -->
+    <div id="first">
+        <h1>Sam’s Quest</h1>
+        <p>Welcome to a small journey made with love and honesty.<br><br>
+        Sam has something important to tell Cheryl. 🕊️</p>
+        <button onclick="nextStep()">Begin</button>
+    </div>
+
+    <!-- STEP 2 -->
+    <div id="second">
+        <h1>Truth & Heart</h1>
+        <p>Every good quest has honesty, kindness, and a little vulnerability.<br><br>
+        This one is simple:<br><strong>Sam wants to say sorry.</strong></p>
+        <button onclick="finalStep()">Continue</button>
+    </div>
+
+    <!-- STEP 3 -->
+    <div id="final">
+        <h1>From Sam to Cheryl</h1>
+        <p>
+            I love you so much.<br>
+            I am terribly sorry for what I did.<br><br>
+            Thank you for being someone I never want to lose.<br>
+            Your heart matters to me more than my pride ever will.
+        </p>
+        <p>💗</p>
+    </div>
+
+</div>
+
+<script>
+function nextStep() {
+    document.getElementById("first").style.display = "none";
+    document.getElementById("second").style.display = "block";
+}
+function finalStep() {
+    document.getElementById("second").style.display = "none";
+    document.getElementById("final").style.display = "block";
+}
+</script>
+
+</body>
+</html>
